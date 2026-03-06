@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clean Habits, Healthy Surroundings</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Lottie Player for animated illustrations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <!-- Celebration Sound -->
+  <audio id="celebrateSound" src="https://cdn.pixabay.com/download/audio/2022/03/01/audio_baddc6fda2.mp3?filename=small-crowd-cheer-6713.mp3" preload="auto"></audio>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Clean Habits, Healthy Surroundings</h1>
+      <p class="subtitle">A Community Service Project on Health & Sanitation Awareness</p>
+    </header>
+
+    <nav class="module-nav">
+      <button onclick="showModule('intro')" title="View project overview">
+        <i class="fas fa-house fa-bounce"></i> Introduction
+      </button>
+
+      <button onclick="showModule('tips')"><i class="fas fa-tree fa-bounce"></i> Surrounding Tips</button>
+
+
+      <button onclick="showModule('cleaning')" title="Steps to clean surroundings">
+        <i class="fas fa-broom fa-shake"></i> Cleaning Process
+      </button>
+
+      <button onclick="showModule('survey')" title="Fill out a community hygiene form">
+        <i class="fas fa-poll fa-beat-fade"></i> Health Survey
+      </button>
+
+      <button onclick="showModule('problems')" title="Common problems and solutions">
+        <i class="fas fa-triangle-exclamation fa-shake"></i> Issues & Solutions
+      </button>
+
+      <button onclick="showModule('quiz')" title="Take a fun awareness quiz">
+        <i class="fas fa-brain fa-spin"></i> Take Hygiene Quiz
+      </button>
+
+      <button onclick="showModule('waste')" title="Learn about waste segregation">
+        <i class="fas fa-recycle fa-bounce"></i> Waste Management
+      </button>
+
+      <button onclick="showModule('plastic')" title="Use eco-friendly products">
+        <i class="fas fa-shopping-bag fa-beat"></i> Plastic Alternatives
+      </button>
+
+      <button onclick="showModule('water')" title="Tips to save water at home">
+        <i class="fas fa-tint fa-beat-fade"></i> Water Conservation
+      </button>
+
+
+      <button onclick="showModule('weather')"><i class="fas fa-cloud-sun-rain fa-bounce"></i> Surrounding Health Tips</button>
+
+      <button onclick="showModule('about')" title="Know the developers & goals">
+        <i class="fas fa-circle-info fa-flip"></i> About Project
+      </button>
+
+
+    </nav>
+
+    <section id="intro" class="module">
+      <h2>🏠 Introduction</h2>
+      <img src="images/cleanenvironment.png" alt="Clean Environment" class="hero-banner">
+      <p>
+        This web application is a digital initiative developed as part of our CSP project to raise awareness about health, hygiene, and cleanliness in rural and semi-urban areas. It is designed to educate users, collect their responses, and share solutions for daily sanitation and personal hygiene challenges. The app serves as a digital alternative to physical surveys, helping us reach wider audiences.
+      </p>
+    </section>
+
+    <section id="tips" class="module">
+    <h2>🧹 Clean Surroundings Tips – Learn & Act</h2>
+
+    <!-- Tip 1: Garbage Segregation -->
+    <div class="tip-card">
+      <h3>1. Garbage Segregation</h3>
+      <img src="images/dustbin.png" alt="Garbage Segregation" class="hero-banner">
+      <p>Separate waste at home into dry (plastic, paper) and wet (food, organic) to help proper disposal and recycling.</p>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/0ZiD_Lb3Tm0?si=TirqY7ST2Qs22Aby" title="Segregating Waste at Home" frameborder="0" allowfullscreen></iframe>
+      <a href="https://drive.google.com/file/d/1_G8c8KEcvErZ-hwlFmPK5VwBgWxh_oDI/view?usp=sharing" class="download-link" target="_blank">📥 Download PDF Guide</a>
+    </div>
+
+    <!-- Tip 2: Avoid Open Dumping -->
+    <div class="tip-card">
+      <h3>2. Avoid Open Dumping</h3>
+      <img src="images/garbage.png" alt="Open Dumping" class="hero-banner">
+      <p>Use covered bins and avoid throwing garbage in streets or drains. Open dumping spreads diseases and attracts pests.</p>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/9htbFBT7D7I?si=aBkFpTGvUTPAcmDf" title="Open Dumping Harms" frameborder="0" allowfullscreen></iframe>
+      <a href="https://drive.google.com/file/d/1i0ztIoqpVqGKGQC6a91d_wXQK7BHQBnz/view?usp=sharing" class="download-link" target="_blank">📥 Download Awareness PDF</a>
+    </div>
+
+    <!-- Tip 3: Control Stagnant Water -->
+    <div class="tip-card">
+      <h3>3. Control Stagnant Water</h3>
+      <img src="images/Control Stagnant Water.png" alt="Stagnant Water" class="hero-banner">
+      <p>Water collected in pots, tires, or trash becomes a breeding ground for mosquitoes. Empty it every 2–3 days.</p>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/p7WZXxyMqDU?si=C-nZXVmabxkOFgPA" title="Avoid Stagnant Water" frameborder="0" allowfullscreen></iframe>
+      <a href="https://drive.google.com/file/d/1mFzpXg5UNbY93eoNRVQtfQJWQa9aHbGY/view?usp=sharing" class="download-link" target="_blank">📥 Download Water Control PDF</a>
+    </div>
+    </section>
+
+
+
+    <section id="cleaning" class="module">
+      <h2>🧹 Process to Keep Surroundings Clean</h2>
+      <ol>
+        <li>Sweep around the house and common areas daily or at least 3 times a week.</li>
+        <li>Segregate waste: Use green bins for wet waste and blue bins for dry waste.</li>
+        <li>Avoid dumping garbage in open areas. Use community bins if available.</li>
+        <li>Cover and regularly clean drains to prevent mosquito breeding.</li>
+        <li>Empty stagnant water from vessels, tires, or pots every 2–3 days.</li>
+        <li>Encourage neighbors to participate in maintaining street cleanliness.</li>
+      </ol>
+    </section>
+
+    <section id="survey" class="module">
+      <h2>📝 Health & Hygiene Survey</h2>
+      <img src="images/survey.png" alt="Community Survey" class="hero-banner">
+      <p>Please fill out the short form below to help us understand community hygiene practices. Your responses are valuable!</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTAl-M3svJeE4ge_CoxqZ6cYrKy2Zc0zwlRe_TC2Se9oPu2Q/viewform?usp=sharing&ouid=114901346072871665439" width="100%" height="500px" style="border:none;"></iframe>
+    </section>
+
+    <section id="problems" class="module">
+      <h2>🚫 Common Issues & Practical Solutions</h2>
+      <img src="images/problems.png" alt="Sanitation Problems" class="hero-banner">      
+      <ul>
+        <li><strong>Issue:</strong> Lack of toilets at home<br><strong>Solution:</strong> Use community toilets or apply under the Swachh Bharat Yojana.</li>
+        <li><strong>Issue:</strong> Open garbage dumping<br><strong>Solution:</strong> Segregate and use dustbins; talk to local panchayat to place bins nearby.</li>
+        <li><strong>Issue:</strong> Stagnant water leads to mosquitoes<br><strong>Solution:</strong> Drain water every 2 days and cover open pots.</li>
+        <li><strong>Issue:</strong> No awareness about government health schemes<br><strong>Solution:</strong> Educate people about Aarogya Sri, Anganwadi services, and vaccinations.</li>
+      </ul>
+    </section>
+
+    <section id="waste" class="module">
+      <h2>♻️ Waste Management Awareness</h2>
+      <ul>
+        <li>Segregate waste into dry and wet categories at the source.</li>
+        <li>Use color-coded bins: Green for biodegradable, Blue for recyclables, Red for hazardous.</li>
+        <li>Compost kitchen waste like vegetable peels, tea leaves, and leftovers.</li>
+        <li>Avoid burning waste as it causes air pollution and health issues.</li>
+        <li>Participate in local waste drives and encourage neighbors to join.</li>
+        <li>Report illegal dumping or overflowing bins to local authorities or panchayat.</li>
+      </ul>
+    </section>
+
+    <section id="plastic" class="module">
+    <h2>🛍️ Say No to Plastic: Use These Alternatives</h2>
+    <ul>
+      <li>Use cloth bags, jute bags, or paper bags instead of plastic carry bags.</li>
+      <li>Switch to metal or glass water bottles instead of plastic bottles.</li>
+      <li>Use wooden or steel cutlery for events rather than plastic spoons/forks.</li>
+      <li>Buy groceries in bulk to reduce plastic packaging.</li>
+      <li>Try beeswax wraps or steel lunch boxes instead of cling film and plastic containers.</li>
+      <li>Support local stores that promote zero-waste shopping.</li>
+    </ul>
+    </section>
+
+    <section id="water" class="module">
+    <h2>💧 Water Conservation for a Clean Environment</h2>
+    <ul>
+      <li>🚿 Avoid water overflow while filling tanks, buckets, or public taps to prevent puddles and mosquito breeding.</li>
+      <li>🔧 Fix public and home water leaks by reporting them to local authorities or using plumbing services.</li>
+      <li>🌾 Promote drip irrigation in gardens, farms, and village lands to avoid excess water usage.</li>
+      <li>🌧️ Implement rainwater harvesting in homes, schools, and public buildings to recharge groundwater.</li>
+      <li>🚫 Do not dump waste or chemicals into ponds, lakes, or streams—protect community water bodies.</li>
+      <li>🧹 Clean drainage paths regularly to allow rainwater to flow and prevent flooding and contamination.</li>
+      <li>💧 Use collected rainwater or RO waste for cleaning streets or watering trees in the neighborhood.</li>
+    </ul>
+    </section>
+
+
+    <section id="quiz" class="module">
+    <h2>🧠 Clean Surroundings Awareness Quiz</h2>
+    <form id="quizForm">
+      <p><strong>1. What should you do with kitchen waste?</strong></p>
+      <label><input type="radio" name="q1" value="a"> Throw it in open fields</label><br>
+      <label><input type="radio" name="q1" value="b"> Burn it with plastic</label><br>
+      <label><input type="radio" name="q1" value="c"> Compost or use green bin</label><br><br>
+
+      <p><strong>2. What color bin is used for dry waste?</strong></p>
+      <label><input type="radio" name="q2" value="a"> Blue</label><br>
+      <label><input type="radio" name="q2" value="b"> Red</label><br>
+      <label><input type="radio" name="q2" value="c"> Green</label><br><br>
+
+      <p><strong>3. What is the effect of stagnant water?</strong></p>
+      <label><input type="radio" name="q3" value="a"> Fertilizes plants</label><br>
+      <label><input type="radio" name="q3" value="b"> Attracts mosquitoes</label><br>
+      <label><input type="radio" name="q3" value="c"> Purifies the air</label><br><br>
+
+      <p><strong>4. What’s the best way to dispose of plastic?</strong></p>
+      <label><input type="radio" name="q4" value="a"> Recycle it</label><br>
+      <label><input type="radio" name="q4" value="b"> Burn it</label><br>
+      <label><input type="radio" name="q4" value="c"> Throw in water</label><br><br>
+
+      <p><strong>5. Which of these helps keep your area clean?</strong></p>
+      <label><input type="radio" name="q5" value="a"> Community clean-up</label><br>
+      <label><input type="radio" name="q5" value="b"> Littering during festivals</label><br>
+      <label><input type="radio" name="q5" value="c"> Ignoring garbage</label><br><br>
+
+      <p><strong>6. What should you do before the rainy season?</strong></p>
+      <label><input type="radio" name="q6" value="a"> Keep vessels open</label><br>
+      <label><input type="radio" name="q6" value="b"> Clean drains and remove stagnant water</label><br>
+      <label><input type="radio" name="q6" value="c"> Store water in garbage bins</label><br><br>
+
+      <p><strong>7. Where should e-waste (old batteries) be disposed?</strong></p>
+      <label><input type="radio" name="q7" value="a"> Compost bin</label><br>
+      <label><input type="radio" name="q7" value="b"> Recyclable waste center</label><br>
+      <label><input type="radio" name="q7" value="c"> In lakes or rivers</label><br><br>
+
+      <button type="button" onclick="checkQuiz()">📝 Submit Quiz</button>
+    </form>
+    <div id="quizResult" style="margin-top: 20px; font-weight: bold;"></div>
+    </section>
+
+
+    
+
+    <section id="weather" class="module">
+    <h2>🌦️ Surrounding Health Tips</h2>
+    <p id="weather-info">Fetching weather data...</p>
+    <p id="health-tip" style="margin-top: 10px;"></p>
+    </section>
+
+    <section id="about" class="module">
+      <h2>ℹ️ About This Project</h2>
+      <img src="images/about.png" alt="Team Collaboration" class="hero-banner">
+      <p>
+        “Clean Habits, Healthy Surroundings” is a Community Service Project undertaken by students to promote health awareness through digital means. The project covers topics like personal hygiene, water safety, sanitation, and surroundings cleanliness. We aim to motivate people to adopt small changes that result in a big impact on health.
+      </p>
+      <p><strong>Contact : 8333043234<br></strong> devaharshaveerla@gmail.com | <strong><br>Developed by:</strong> Deva Harsha Veerla</p>
+    </section>
+
+    <footer>
+      <p>© 2025 | CSP Project | All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
