@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Habits, Healthy Surroundings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <audio id="celebrateSound" src="https://cdn.pixabay.com/download/audio/2022/03/01/audio_baddc6fda2.mp3?filename=small-crowd-cheer-6713.mp3" preload="auto"></audio>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient background particles -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">🌿</span>
+      <div class="brand-text">
+        <strong>Clean Habits</strong>
+        <span>Healthy Surroundings</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" onclick="showModule('intro', this)" data-label="Introduction">
+        <span class="nav-icon"><i class="fas fa-house"></i></span>
+        <span class="nav-label">Introduction</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('tips', this)" data-label="Surrounding Tips">
+        <span class="nav-icon"><i class="fas fa-tree"></i></span>
+        <span class="nav-label">Surrounding Tips</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('cleaning', this)" data-label="Cleaning Process">
+        <span class="nav-icon"><i class="fas fa-broom"></i></span>
+        <span class="nav-label">Cleaning Process</span>
+      </button>
+      
+      <button class="nav-btn" onclick="showModule('problems', this)" data-label="Issues & Solutions">
+        <span class="nav-icon"><i class="fas fa-triangle-exclamation"></i></span>
+        <span class="nav-label">Issues & Solutions</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('quiz', this)" data-label="Hygiene Quiz">
+        <span class="nav-icon"><i class="fas fa-brain"></i></span>
+        <span class="nav-label">Hygiene Quiz</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('waste', this)" data-label="Waste Management">
+        <span class="nav-icon"><i class="fas fa-recycle"></i></span>
+        <span class="nav-label">Waste Management</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('plastic', this)" data-label="Plastic Alternatives">
+        <span class="nav-icon"><i class="fas fa-shopping-bag"></i></span>
+        <span class="nav-label">Plastic Alternatives</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('water', this)" data-label="Water Conservation">
+        <span class="nav-icon"><i class="fas fa-tint"></i></span>
+        <span class="nav-label">Water Conservation</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('weather', this)" data-label="Health Tips">
+        <span class="nav-icon"><i class="fas fa-cloud-sun-rain"></i></span>
+        <span class="nav-label">Health Tips</span>
+      </button>
+      <button class="nav-btn" onclick="showModule('about', this)" data-label="About Project">
+        <span class="nav-icon"><i class="fas fa-circle-info"></i></span>
+        <span class="nav-label">About Project</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <span>© 2025 CSP Project</span>
+    </div>
+  </aside>
+
+  <!-- Mobile top bar -->
+  <div class="mobile-topbar">
+    <button class="hamburger" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <span class="mobile-title">🌿 Clean Habits</span>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- Main content area -->
+  <main class="main-content">
+
+    <!-- ── INTRO ── -->
+    <section id="intro" class="module active">
+      <div class="module-header">
+        <div class="module-tag">Welcome</div>
+        <h2>Clean Habits,<br><em>Healthy Surroundings</em></h2>
+        <p class="module-desc">A Community Service Project on Health & Sanitation Awareness</p>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="images/cleanenvironment.png" alt="Clean Environment" class="hero-img">
+        <div class="hero-overlay-text">Building Cleaner Communities</div>
+      </div>
+      <div class="intro-cards">
+        <div class="intro-card">
+          <span class="card-emoji">📱</span>
+          <h4>Digital Initiative</h4>
+          <p>A web platform developed as part of our CSP project to raise awareness about health, hygiene, and cleanliness in rural and semi-urban areas.</p>
+        </div>
+        <div class="intro-card">
+          <span class="card-emoji">🏘️</span>
+          <h4>Community Focus</h4>
+          <p>Designed to educate users, collect their responses, and share solutions for daily sanitation and personal hygiene challenges.</p>
+        </div>
+        <div class="intro-card">
+          <span class="card-emoji">🌍</span>
+          <h4>Wider Reach</h4>
+          <p>The app serves as a digital alternative to physical surveys, helping us reach wider audiences across communities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SURROUNDING TIPS ── -->
+    <section id="tips" class="module">
+      <div class="module-header">
+        <div class="module-tag">Education</div>
+        <h2>Clean Surroundings Tips<br><em>Learn & Act</em></h2>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-number">01</div>
+          <img src="images/dustbin.png" alt="Garbage Segregation" class="tip-img">
+          <div class="tip-content">
+            <h3>Garbage Segregation</h3>
+            <p>Separate waste at home into dry (plastic, paper) and wet (food, organic) to help proper disposal and recycling.</p>
+            <div class="tip-media">
+              <iframe width="100%" height="200" src="https://youtu.be/0ZiD_Lb3Tm0?si=6fBAlZR2YanOeLl3" title="Segregating Waste at Home" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <a href="https://drive.google.com/file/d/1_G8c8KEcvErZ-hwlFmPK5VwBgWxh_oDI/view?usp=sharing" class="download-btn" target="_blank">
+              <i class="fas fa-download"></i> Download PDF Guide
+            </a>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-number">02</div>
+          <img src="images/garbage.png" alt="Open Dumping" class="tip-img">
+          <div class="tip-content">
+            <h3>Avoid Open Dumping</h3>
+            <p>Use covered bins and avoid throwing garbage in streets or drains. Open dumping spreads diseases and attracts pests.</p>
+            <div class="tip-media">
+              <iframe width="100%" height="200" src="https://youtu.be/9htbFBT7D7I?si=ExjiOUARdU4NY9_o" title="Open Dumping Harms" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <a href="https://drive.google.com/file/d/1i0ztIoqpVqGKGQC6a91d_wXQK7BHQBnz/view?usp=sharing" class="download-btn" target="_blank">
+              <i class="fas fa-download"></i> Download Awareness PDF
+            </a>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-number">03</div>
+          <img src="images/control-stagnant-water.png" alt="Stagnant Water" class="tip-img">
+          <div class="tip-content">
+            <h3>Control Stagnant Water</h3>
+            <p>Water collected in pots, tires, or trash becomes a breeding ground for mosquitoes. Empty it every 2–3 days.</p>
+            <div class="tip-media">
+              <iframe width="100%" height="200" src="https://youtu.be/p7WZXxyMqDU?si=C-nZXVmabxkOFgPA" title="Avoid Stagnant Water" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <a href="https://drive.google.com/file/d/1mFzpXg5UNbY93eoNRVQtfQJWQa9aHbGY/view?usp=sharing" class="download-btn" target="_blank">
+              <i class="fas fa-download"></i> Download Water Control PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLEANING PROCESS ── -->
+    <section id="cleaning" class="module">
+      <div class="module-header">
+        <div class="module-tag">How-To</div>
+        <h2>Process to Keep<br><em>Surroundings Clean</em></h2>
+      </div>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">Sweep around the house and common areas daily or at least 3 times a week.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">Segregate waste: Use <span class="tag green">green bins</span> for wet waste and <span class="tag blue">blue bins</span> for dry waste.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">Avoid dumping garbage in open areas. Use community bins if available.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text">Cover and regularly clean drains to prevent mosquito breeding.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-text">Empty stagnant water from vessels, tires, or pots every 2–3 days.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">6</div>
+          <div class="step-text">Encourage neighbors to participate in maintaining street cleanliness.</div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ── PROBLEMS ── -->
+    <section id="problems" class="module">
+      <div class="module-header">
+        <div class="module-tag">Solutions</div>
+        <h2>Common Issues &<br><em>Practical Solutions</em></h2>
+      </div>
+      <img src="images/problems.png" alt="Sanitation Problems" class="section-img">
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-issue"><i class="fas fa-times-circle"></i> Lack of toilets at home</div>
+          <div class="problem-solution"><i class="fas fa-check-circle"></i> Use community toilets or apply under the Swachh Bharat Yojana.</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-issue"><i class="fas fa-times-circle"></i> Open garbage dumping</div>
+          <div class="problem-solution"><i class="fas fa-check-circle"></i> Segregate and use dustbins; talk to local panchayat to place bins nearby.</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-issue"><i class="fas fa-times-circle"></i> Stagnant water leads to mosquitoes</div>
+          <div class="problem-solution"><i class="fas fa-check-circle"></i> Drain water every 2 days and cover open pots.</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-issue"><i class="fas fa-times-circle"></i> No awareness about government health schemes</div>
+          <div class="problem-solution"><i class="fas fa-check-circle"></i> Educate people about Aarogya Sri, Anganwadi services, and vaccinations.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── QUIZ ── -->
+    <section id="quiz" class="module">
+      <div class="module-header">
+        <div class="module-tag">Test Yourself</div>
+        <h2>Clean Surroundings<br><em>Awareness Quiz</em></h2>
+        <p class="module-desc">7 questions · Answers checked instantly</p>
+      </div>
+
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+      <div class="quiz-progress-label" id="quizProgressLabel">0 / 7 answered</div>
+
+      <div class="quiz-form" id="quizForm">
+        <div class="quiz-q">
+          <div class="q-label">Q1</div>
+          <p>What should you do with kitchen waste?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q1" value="a" onchange="updateProgress()"> Throw it in open fields</label>
+            <label class="quiz-opt"><input type="radio" name="q1" value="b" onchange="updateProgress()"> Burn it with plastic</label>
+            <label class="quiz-opt"><input type="radio" name="q1" value="c" onchange="updateProgress()"> Compost or use green bin</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <div class="q-label">Q2</div>
+          <p>What color bin is used for dry waste?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q2" value="a" onchange="updateProgress()"> Blue</label>
+            <label class="quiz-opt"><input type="radio" name="q2" value="b" onchange="updateProgress()"> Red</label>
+            <label class="quiz-opt"><input type="radio" name="q2" value="c" onchange="updateProgress()"> Green</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <div class="q-label">Q3</div>
+          <p>What is the effect of stagnant water?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q3" value="a" onchange="updateProgress()"> Fertilizes plants</label>
+            <label class="quiz-opt"><input type="radio" name="q3" value="b" onchange="updateProgress()"> Attracts mosquitoes</label>
+            <label class="quiz-opt"><input type="radio" name="q3" value="c" onchange="updateProgress()"> Purifies the air</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <div class="q-label">Q4</div>
+          <p>What's the best way to dispose of plastic?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q4" value="a" onchange="updateProgress()"> Recycle it</label>
+            <label class="quiz-opt"><input type="radio" name="q4" value="b" onchange="updateProgress()"> Burn it</label>
+            <label class="quiz-opt"><input type="radio" name="q4" value="c" onchange="updateProgress()"> Throw in water</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <div class="q-label">Q5</div>
+          <p>Which of these helps keep your area clean?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q5" value="a" onchange="updateProgress()"> Community clean-up</label>
+            <label class="quiz-opt"><input type="radio" name="q5" value="b" onchange="updateProgress()"> Littering during festivals</label>
+            <label class="quiz-opt"><input type="radio" name="q5" value="c" onchange="updateProgress()"> Ignoring garbage</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <div class="q-label">Q6</div>
+          <p>What should you do before the rainy season?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q6" value="a" onchange="updateProgress()"> Keep vessels open</label>
+            <label class="quiz-opt"><input type="radio" name="q6" value="b" onchange="updateProgress()"> Clean drains and remove stagnant water</label>
+            <label class="quiz-opt"><input type="radio" name="q6" value="c" onchange="updateProgress()"> Store water in garbage bins</label>
+          </div>
+        </div>
+        <div class="quiz-q">
+          <div class="q-label">Q7</div>
+          <p>Where should e-waste (old batteries) be disposed?</p>
+          <div class="quiz-options">
+            <label class="quiz-opt"><input type="radio" name="q7" value="a" onchange="updateProgress()"> Compost bin</label>
+            <label class="quiz-opt"><input type="radio" name="q7" value="b" onchange="updateProgress()"> Recyclable waste center</label>
+            <label class="quiz-opt"><input type="radio" name="q7" value="c" onchange="updateProgress()"> In lakes or rivers</label>
+          </div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="checkQuiz()">
+          <i class="fas fa-paper-plane"></i> Submit Quiz
+        </button>
+      </div>
+
+      <div id="quizResult" class="quiz-result hidden"></div>
+    </section>
+
+    <!-- ── WASTE MANAGEMENT ── -->
+    <section id="waste" class="module">
+      <div class="module-header">
+        <div class="module-tag">Environment</div>
+        <h2>Waste Management<br><em>Awareness</em></h2>
+      </div>
+      <div class="icon-list">
+        <div class="icon-item">
+          <span class="list-icon green">♻️</span>
+          <span>Segregate waste into dry and wet categories at the source.</span>
+        </div>
+        <div class="icon-item">
+          <span class="list-icon">🗑️</span>
+          <span>Use color-coded bins: <strong style="color:#4caf50">Green</strong> for biodegradable, <strong style="color:#2196f3">Blue</strong> for recyclables, <strong style="color:#f44336">Red</strong> for hazardous.</span>
+        </div>
+        <div class="icon-item">
+          <span class="list-icon">🌱</span>
+          <span>Compost kitchen waste like vegetable peels, tea leaves, and leftovers.</span>
+        </div>
+        <div class="icon-item">
+          <span class="list-icon">🚫</span>
+          <span>Avoid burning waste as it causes air pollution and health issues.</span>
+        </div>
+        <div class="icon-item">
+          <span class="list-icon">🤝</span>
+          <span>Participate in local waste drives and encourage neighbors to join.</span>
+        </div>
+        <div class="icon-item">
+          <span class="list-icon">📢</span>
+          <span>Report illegal dumping or overflowing bins to local authorities or panchayat.</span>
+        </div>
+      </div>
+      <div class="bin-legend">
+        <div class="bin-card green-bin"><span>🟢</span><strong>Green Bin</strong><small>Wet / Biodegradable</small></div>
+        <div class="bin-card blue-bin"><span>🔵</span><strong>Blue Bin</strong><small>Dry / Recyclables</small></div>
+        <div class="bin-card red-bin"><span>🔴</span><strong>Red Bin</strong><small>Hazardous Waste</small></div>
+      </div>
+    </section>
+
+    <!-- ── PLASTIC ALTERNATIVES ── -->
+    <section id="plastic" class="module">
+      <div class="module-header">
+        <div class="module-tag">Eco-Friendly</div>
+        <h2>Say No to Plastic<br><em>Use These Alternatives</em></h2>
+      </div>
+      <div class="plastic-grid">
+        <div class="plastic-card">
+          <div class="plastic-icon">👜</div>
+          <div class="plastic-text">
+            <strong>Bags</strong>
+            <span>Cloth, jute, or paper bags instead of plastic carry bags</span>
+          </div>
+        </div>
+        <div class="plastic-card">
+          <div class="plastic-icon">🍶</div>
+          <div class="plastic-text">
+            <strong>Bottles</strong>
+            <span>Metal or glass water bottles instead of plastic</span>
+          </div>
+        </div>
+        <div class="plastic-card">
+          <div class="plastic-icon">🥄</div>
+          <div class="plastic-text">
+            <strong>Cutlery</strong>
+            <span>Wooden or steel cutlery for events instead of plastic</span>
+          </div>
+        </div>
+        <div class="plastic-card">
+          <div class="plastic-icon">🛒</div>
+          <div class="plastic-text">
+            <strong>Shopping</strong>
+            <span>Buy groceries in bulk to reduce plastic packaging</span>
+          </div>
+        </div>
+        <div class="plastic-card">
+          <div class="plastic-icon">🍱</div>
+          <div class="plastic-text">
+            <strong>Storage</strong>
+            <span>Beeswax wraps or steel lunch boxes instead of cling film</span>
+          </div>
+        </div>
+        <div class="plastic-card">
+          <div class="plastic-icon">🏪</div>
+          <div class="plastic-text">
+            <strong>Shopping Local</strong>
+            <span>Support local stores that promote zero-waste shopping</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WATER CONSERVATION ── -->
+    <section id="water" class="module">
+      <div class="module-header">
+        <div class="module-tag">Conservation</div>
+        <h2>Water Conservation<br><em>for a Clean Environment</em></h2>
+      </div>
+      <div class="water-tips">
+        <div class="water-tip">
+          <div class="water-emoji">🚿</div>
+          <div>Avoid water overflow while filling tanks, buckets, or public taps to prevent puddles and mosquito breeding.</div>
+        </div>
+        <div class="water-tip">
+          <div class="water-emoji">🔧</div>
+          <div>Fix public and home water leaks by reporting them to local authorities or using plumbing services.</div>
+        </div>
+        <div class="water-tip">
+          <div class="water-emoji">🌾</div>
+          <div>Promote drip irrigation in gardens, farms, and village lands to avoid excess water usage.</div>
+        </div>
+        <div class="water-tip">
+          <div class="water-emoji">🌧️</div>
+          <div>Implement rainwater harvesting in homes, schools, and public buildings to recharge groundwater.</div>
+        </div>
+        <div class="water-tip">
+          <div class="water-emoji">🚫</div>
+          <div>Do not dump waste or chemicals into ponds, lakes, or streams—protect community water bodies.</div>
+        </div>
+        <div class="water-tip">
+          <div class="water-emoji">🧹</div>
+          <div>Clean drainage paths regularly to allow rainwater to flow and prevent flooding and contamination.</div>
+        </div>
+        <div class="water-tip">
+          <div class="water-emoji">💧</div>
+          <div>Use collected rainwater or RO waste for cleaning streets or watering trees in the neighborhood.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WEATHER / HEALTH TIPS ── -->
+    <section id="weather" class="module">
+      <div class="module-header">
+        <div class="module-tag">Live</div>
+        <h2>Surrounding<br><em>Health Tips</em></h2>
+        <p class="module-desc">Based on current weather in your area</p>
+      </div>
+      <div class="weather-card" id="weatherCard">
+        <div class="weather-loading" id="weatherLoading">
+          <i class="fas fa-spinner fa-spin"></i> Fetching weather data...
+        </div>
+        <div id="weather-info" class="weather-display hidden"></div>
+        <div id="health-tip" class="health-tip-display hidden"></div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="module">
+      <div class="module-header">
+        <div class="module-tag">About</div>
+        <h2>About This<br><em>Project</em></h2>
+      </div>
+      <img src="images/about.png" alt="Team Collaboration" class="section-img">
+      <div class="about-content">
+        <div class="about-block">
+          <p>"Clean Habits, Healthy Surroundings" is a Community Service Project undertaken by students to promote health awareness through digital means. The project covers topics like personal hygiene, water safety, sanitation, and surroundings cleanliness. We aim to motivate people to adopt small changes that result in a big impact on health.</p>
+        </div>
+        <div class="about-contact">
+          <div class="contact-item"><i class="fas fa-phone"></i> 8333043234</div>
+          <div class="contact-item"><i class="fas fa-envelope"></i> devaharshaveerla@gmail.com</div>
+          <div class="contact-item"><i class="fas fa-user"></i> Developed by: <strong>Deva Harsha Veerla</strong></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
